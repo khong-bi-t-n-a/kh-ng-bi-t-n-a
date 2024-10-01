@@ -59,21 +59,7 @@ jobs:
         show-channel-urls: # optional, default is 
     # Conda configuration. Conda 4.7 introduced a new .conda package file format. .conda is a more compact and faster alternative to .tar.bz2 packages. It is thus the preferred file format to use where available. Nevertheless, it is possible to force conda to only download .tar.bz2 packages by setting the use_only_tar_bz2 boolean to "true". The default is "false". See https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#force-conda-to-download-only-tar-bz2-packages-use-only-tar-bz2 for more information.
         use-only-tar-bz2: # optional, default is 
-    # Advanced. Prior to runnning "conda init" all shell profiles will be removed from the runner. Default is "true".
-    	remove-profiles: # optional, default is true
-    # Use mamba (https://github.com/QuantStack/mamba) as a faster drop-in replacement for conda installs. Disabled by default. To enable, use "*" or a "x.y" version string.
-    	mamba-version: # optional, default is 
-    # Use mamba as soon as available (either as provided by `mamba-in-installer` or installation by `mamba-version`)
-    	use-mamba: # optional, default is 
-    # Which conda solver plugin to use. Only applies to the `conda` client, not `mamba`. Starting with Miniconda 23.5.2 and Miniforge 23.3.1, you can choose between `classic` and `libmamba`.
-    	conda-solver: # optional, default is libmamba
-    # Architecture of Miniconda that should be installed. This is automatically detected by the runner. If you want to override it, you can use "x64", "x86", "arm64", "aarch64", "s390x".
-    	architecture: # optional, default is 
-    # Whether a patched environment-file (if created) should be cleaned
-    	clean-patched-environment-file: # optional, default is true
-    # Set this option to "false" to disable running the post cleanup step of the action. Default is "true"
-    	run-post: # optional, default is true
-          
+    # Advanced. Prior to runnning "conda init" all shell profiles will be removed from the runner. Default is "true".  
           
     - name: Add conda to system path
       run: |
