@@ -20,7 +20,7 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        source ${CONDA}/bin/activate
+        source $CONDA/bin/activate
         conda env update --file environment.yml --name base
     - name: Lint with flake8
       run: |
