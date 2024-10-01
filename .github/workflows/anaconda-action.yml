@@ -1,0 +1,18 @@
+name: 'Anaconda Github Action'
+
+on: [push]
+
+jobs:
+  test_job:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
+        pythonVersion: [3.12]
+    steps:
+    - uses: actions/checkout@v5
+    - name: Anaconda-Action
+      id: step1
+      uses: fdiblen/anaconda-action@0.1.7
+      with:
+        envFileName: 'environment.yml'
