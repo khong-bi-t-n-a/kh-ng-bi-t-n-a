@@ -1,3 +1,4 @@
-.ipynb_checkpoints/
 *~
-*.pdfweatherHistory.csv
+.ipynb_checkpoints/
+weatherHistory.csv
+*.pdf
